@@ -5,7 +5,7 @@ provider "aws" {
 # INSTANCES #
 
 resource "aws_instance" "jumphost" {
-  ami                         = data.aws_ami.ubuntu.id
+  ami                         = data.aws_ami.amazon_linux.id
   instance_type               = var.instance_type
   availability_zone           = "${var.aws_region}a"
   subnet_id                   = aws_subnet.dmz_subnet.id

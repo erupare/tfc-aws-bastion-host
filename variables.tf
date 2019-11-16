@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "instance_type" {
   description = "type of EC2 instance to provision."
-  default     = "t2.small"
+  default     = "t2.micro"
 }
 
 variable "name" {
@@ -14,7 +14,7 @@ variable "name" {
 }
 
 variable "key_name" {
-  default = "joestack"
+  default = "erstack_key"
 }
 
 variable "network_address_space" {
