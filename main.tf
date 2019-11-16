@@ -12,7 +12,7 @@ resource "aws_instance" "jumphost" {
   private_ip                  = "192.168.1.100"
   associate_public_ip_address = "true"
   vpc_security_group_ids      = [aws_security_group.jumphost.id]
-  key_name                    = var.key_name
+  key_name                    = "${var.key_name}"
 
   tags = {
     Name = var.name
